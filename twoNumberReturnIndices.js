@@ -1,25 +1,21 @@
-function generateAllPermutations(str) {
-    const results = [];
+function twoNumberReturnIndices(nums, target) {
+    const numMap = newMap();
 
-    // Helper to do recursion
-    function permute(arr, l, r) {
-        if (l === r) {
-            results.push(arr.join(''));
-        } else {
-            for (let i = l; i <= r; i++) {
-                [arr[l], arr[i]] = [arr[i], arr[l]]; 
-                permute(arr, l + 1, r);
-                [arr[l], arr[i]] = [arr[i], arr[l]]; 
-            }
+    for (let i = 0; i < nums.length; i++) {
+        const diff = target - nums[i];
+        
+        // Check if the difference is already in the map
+        if (numMap.has(diff)) {
+            // If it is, return the indices
+            return [numMap.get(diff), i];
         }
+        
+        // Otherwise, add the number and its index to the map
+        numMap.set(nums[i], i);
     }
-
-    permute(str.split(''), 0, str.length - 1);
-    return results;
+    
+    // If no solution is found, return an empty array
+    return [];
 }
 
-console.log(generateAllPermutations("NBA"));   // Expected output: ["NBA", "NAB", "BNA", "BAN", "ABN", "ANB"]
-console.log(generateAllPermutations("BA"));    // Expected output: ["BA", "AB"]
-"CBAD", "CBDA", "CABD", "CADB", "CDAB", "CDBA", "DBCA", "DBAC", "DCBA", "DCAB", "DACB", "DABC"]
-
-Overall time complexity O(n⋅n!)
+overall time complexity = O(n)
