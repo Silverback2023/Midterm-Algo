@@ -20,6 +20,5 @@ function generateAllPermutations(str) {
 
 console.log(generateAllPermutations("NBA"));   // Expected output: ["NBA", "NAB", "BNA", "BAN", "ABN", "ANB"]
 console.log(generateAllPermutations("BA"));    // Expected output: ["BA", "AB"]
-"CBAD", "CBDA", "CABD", "CADB", "CDAB", "CDBA", "DBCA", "DBAC", "DCBA", "DCAB", "DACB", "DABC"]
 
 Overall time complexity O(n⋅n!)
