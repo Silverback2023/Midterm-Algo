@@ -4,17 +4,17 @@ function twoNumberReturnIndices(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         const diff = target - nums[i];
         
-        // Check if the difference is already in the map
+        // Check difference is already in map
         if (numMap.has(diff)) {
-            // If it is, return the indices
+            // If it is, return indices
             return [numMap.get(diff), i];
         }
         
-        // Otherwise, add the number and its index to the map
+        // Otherwise, add number and its index to map
         numMap.set(nums[i], i);
     }
     
-    // If no solution is found, return an empty array
+    // If no solution seen, return empty array
     return [];
 }
 
