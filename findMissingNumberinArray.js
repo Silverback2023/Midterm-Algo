@@ -1,4 +1,4 @@
-// find missing number in array
+
 function findMissingNumberInArray(nums, maxNumber) {
     // Compute expected sum of numbers from 1 to maxNumber
     const expectedSum = maxNumber * (maxNumber + 1) / 2;
