@@ -18,4 +18,8 @@ function twoNumberReturnIndices(nums, target) {
     return [];
 }
 
+console.log(twoNumberReturnIndices ([1, 5, 2, 7], 8));           // Expected output: [0, 3]
+console.log(twoNumberReturnIndices ([20, 1, 5, 2, 11], 3));      // Expected output: [1, 3]
+console.log(twoNumberReturnIndices ([3, 2, 4], 6));              // Expected output: [1, 2]
+
 overall time complexity = O(n)
