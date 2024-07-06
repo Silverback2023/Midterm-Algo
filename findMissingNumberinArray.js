@@ -1,12 +1,12 @@
 // find missing number in array
 function findMissingNumberInArray(nums, maxNumber) {
-    // Calculate the expected sum of numbers from 1 to maxNumber
+    // Calculate expected sum of numbers from 1 to maxNumber
     const expectedSum = maxNumber * (maxNumber + 1) / 2;
     
-    // Calculate the actual sum of elements in the given nums array
+    // Calculate actual sum of elements in the given nums array
     const actualSum = nums.reduce((acc, num) => acc + num, 0);
     
-    // The missing number is difference between expected sum and actual sum
+    // The missing number is sum minus actual sum
     const missingNumber = expectedSum - actualSum;
     
     return missingNumber;
